@@ -7,12 +7,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <label for="fileName">Nome del File JSON che vuoi generare:</label>
-    <input type="text" id="fileName" placeholder="Inserisci il nome del file" />
-    <input type="file" id="excelFile" accept=".xlsx, .xls" />
-    <button onclick="convertToJson()">Carica e Converti in JSON</button>
-    <button id="downloadBtn" style="display: none">Scarica JSON</button>
-    <pre id="jsonOutput"></pre>
+    <div class="container">
+      <h1>Convertitore Excel in JSON</h1>
+      <label for="excelFile">Carica File Excel:</label>
+      <input type="file" id="excelFile" accept=".xlsx, .xls" />
+      <label for="fileName">Nome del File JSON:</label>
+      <input
+        type="text"
+        id="fileName"
+        placeholder="Inserisci il nome del file"
+      />
+      <button onclick="convertToJson()">Carica e Converti in JSON</button>
+      <button id="downloadBtn" style="display: none">Scarica JSON</button>
+      <pre id="jsonOutput"></pre>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <script src="script.js"></script>
