@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel to JSON Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <label for="fileName">Nome del File JSON che vuoi generare:</label>
+    <input type="text" id="fileName" placeholder="Inserisci il nome del file" />
+    <input type="file" id="excelFile" accept=".xlsx, .xls" />
+    <button onclick="convertToJson()">Carica e Converti in JSON</button>
+    <button id="downloadBtn" style="display: none">Scarica JSON</button>
+    <pre id="jsonOutput"></pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
